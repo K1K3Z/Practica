@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      *ngFor="let chat of chats"
+      (click)="openChat(chat)"
+      lines="none"
+    >
+      <ion-avatar slot="start">
+        <img [src]="chat.image" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ chat.name }}</h2>
+        <p>{{ chat.lastMessage }}</p>
+      </ion-label>
+      <div slot="end">
+        <ion-text color="medium">
+          <small>{{ chat.time }}</small>
+        </ion-text>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

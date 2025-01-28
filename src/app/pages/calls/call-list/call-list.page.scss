@@ -1,0 +1,38 @@
+ion-item {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+  }
+  
+  ion-avatar img {
+    border-radius: 50%;
+  }
+  
+  ion-label h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  ion-label p {
+    font-size: 14px;
+    color: #6b6b6b;
+    margin: 5px 0 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  ion-icon {
+    margin-right: 5px;
+  }
+  
+  ion-icon[color="danger"] {
+    color: #f44336;
+  }
+  
+  ion-icon[color="success"] {
+    color: #4caf50;
+  }
+  

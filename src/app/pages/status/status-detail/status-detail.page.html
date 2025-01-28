@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novedades</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="status-detail-content">
+  <!-- Barra de búsqueda -->
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+
+  <!-- Sección de Estados -->
+  <ion-text class="section-title">Estados</ion-text>
+  <div class="statuses-container">
+    <ion-card class="status-card" *ngFor="let status of statuses">
+      <div class="status-avatar">
+        <img [src]="status.image" alt="Estado" />
+      </div>
+      <ion-label class="status-label">{{ status.name }}</ion-label>
+    </ion-card>
+  </div>
+
+  <!-- Sección de Canales -->
+  <ion-text class="section-title">Canales</ion-text>
+  <ion-list>
+    <ion-item button *ngFor="let channel of channels" lines="none">
+      <ion-avatar slot="start">
+        <img [src]="channel.image" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ channel.name }}</h2>
+        <p>{{ channel.description }}</p>
+      </ion-label>
+      <ion-text slot="end" color="medium">
+        <p>{{ channel.time }}</p>
+        <ion-badge color="success">{{ channel.unread }}</ion-badge>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

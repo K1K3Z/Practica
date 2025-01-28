@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="settings-content">
+  <!-- Barra de búsqueda -->
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+
+  <!-- Perfil del Usuario -->
+  <ion-item lines="none" (click)="openProfile()">
+    <ion-avatar slot="start">
+      <img src="assets/avatar-user.png" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ user.name }}</h2>
+      <p>{{ user.status }}</p>
+    </ion-label>
+    <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-text color="medium" class="ion-padding-start">
+    <p>Avatar</p>
+  </ion-text>
+
+  <!-- Lista de opciones -->
+  <ion-list>
+    <ion-item button (click)="openOption('listas')" lines="full">
+      <ion-icon name="albums-outline" slot="start"></ion-icon>
+      <ion-label>Listas</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openOption('mensajes-difusion')" lines="full">
+      <ion-icon name="megaphone-outline" slot="start"></ion-icon>
+      <ion-label>Mensajes de difusión</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openOption('mensajes-destacados')" lines="full">
+      <ion-icon name="star-outline" slot="start"></ion-icon>
+      <ion-label>Mensajes destacados</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openOption('dispositivos')" lines="full">
+      <ion-icon name="desktop-outline" slot="start"></ion-icon>
+      <ion-label>Dispositivos vinculados</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item button (click)="openOption('cuenta')" lines="full">
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-label>Cuenta</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openOption('privacidad')" lines="full">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-label>Privacidad</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="openOption('chats')" lines="full">
+      <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+      <ion-label>Chats</ion-label>
+      <ion-badge slot="end">1</ion-badge>
+    </ion-item>
+
+    <ion-item button (click)="openOption('notificaciones')" lines="full">
+      <ion-icon name="notifications-outline" slot="start"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
